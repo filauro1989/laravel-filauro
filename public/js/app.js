@@ -5202,6 +5202,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
@@ -41715,7 +41722,40 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _vm._m(1),
+    _c(
+      "div",
+      { staticClass: "collapse", attrs: { id: "navbarToggleExternalContent" } },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "d-flex flex-column align-items-center bg-light shadow-3 p-4",
+          },
+          _vm._l(_vm.menuItems, function (item) {
+            return _c(
+              "button",
+              { key: item.id, staticClass: "btn w-25 m-1" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link",
+                    attrs: {
+                      "exact-active-class": "active",
+                      to: { name: item.routeName },
+                    },
+                  },
+                  [_vm._v(_vm._s(item.label))]
+                ),
+              ],
+              1
+            )
+          }),
+          0
+        ),
+      ]
+    ),
   ])
 }
 var staticRenderFns = [
@@ -41737,34 +41777,6 @@ var staticRenderFns = [
         },
       },
       [_c("i", { staticClass: "fas fa-bars" })]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "collapse", attrs: { id: "navbarToggleExternalContent" } },
-      [
-        _c("div", { staticClass: "bg-light shadow-3 p-4" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-link btn-block border-bottom m-0" },
-            [_vm._v("\n                Link 1\n            ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-link btn-block border-bottom m-0" },
-            [_vm._v("\n                Link 2\n            ")]
-          ),
-          _vm._v(" "),
-          _c("button", { staticClass: "btn btn-link btn-block m-0" }, [
-            _vm._v("Link 3"),
-          ]),
-        ]),
-      ]
     )
   },
 ]

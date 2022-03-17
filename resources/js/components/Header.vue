@@ -33,14 +33,21 @@
             </nav>
         </header>
         <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-light shadow-3 p-4">
-                <button class="btn btn-link btn-block border-bottom m-0">
-                    Link 1
+            <div
+                class="d-flex flex-column align-items-center bg-light shadow-3 p-4"
+            >
+                <button
+                    v-for="item in menuItems"
+                    :key="item.id"
+                    class="btn w-25 m-1"
+                >
+                    <router-link
+                        class="nav-link"
+                        exact-active-class="active"
+                        :to="{ name: item.routeName }"
+                        >{{ item.label }}</router-link
+                    >
                 </button>
-                <button class="btn btn-link btn-block border-bottom m-0">
-                    Link 2
-                </button>
-                <button class="btn btn-link btn-block m-0">Link 3</button>
             </div>
         </div>
     </div>
