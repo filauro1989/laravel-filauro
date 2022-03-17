@@ -9,6 +9,13 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import App from "./views/App.vue";
+import Home from "./pages/Home.vue";
+import About from "./pages/About.vue";
+import Portfolio from "./pages/Portfolio.vue";
+
+import VueRouter from 'vue-router';
+import Vue from "vue";
+Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,7 +36,28 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+const router = new VueRouter({
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home,
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: About,
+        },
+        {
+            path: '/portfolio',
+            name: 'portfolio',
+            component: Portfolio,
+        },
+    ]
+});
+
 const app = new Vue({
     el: '#app',
     render: h => h(App),
+    router,
 });

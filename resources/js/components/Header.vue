@@ -21,6 +21,25 @@
 <script>
 export default {
     name: "Header",
+    data() {
+        return {
+            // creo array con voci per il v-for nella navbar
+            menuItems: [
+                {
+                    label: "Home",
+                    routeName: "home",
+                },
+                {
+                    label: "Portfolio",
+                    routeName: "portfolio",
+                },
+                {
+                    label: "About",
+                    routeName: "about",
+                },
+            ],
+        };
+    },
 };
 </script>
 
