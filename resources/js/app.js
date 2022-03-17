@@ -17,6 +17,8 @@ import VueRouter from 'vue-router';
 import Vue from "vue";
 Vue.use(VueRouter);
 
+import * as mdb from 'mdb-ui-kit';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -37,6 +39,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const router = new VueRouter({
+    mode: 'history',
+    // attribuiamo alla rotta la classe active
     routes: [
         {
             path: '/',

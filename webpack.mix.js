@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 // Prendi il file app.js che compiliamo in resources e copialo in public/js perché l'utente finale vedrà le cose in public
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .js('node_modules/popper.js/dist/popper.js', 'public/js').sourceMaps();
 
